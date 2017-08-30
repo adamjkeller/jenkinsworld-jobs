@@ -1,0 +1,17 @@
+node('slave') {
+    stage('Checkout') {
+        checkout scm
+    }
+    stage('Build') {
+        sh "echo BUILD STAGE"
+    }
+    stage('test') {
+        sh "echo TEST STAGE"
+    }
+    stage('Push') {
+        sh "echo PUSH STAGE"
+    }
+    stage('Deploy') {
+        sh "echo DEPLOY STAGE"
+    }
+}
